@@ -5,14 +5,18 @@ Faça um programa que fique pedindo uma resposta do usuário, entre 1, 2 e 3. Se
 const read = require('readline-sync')
 let array = []
 let resposta = 0
-console.log('--------MENU--------')
+
+while(resposta !== 3){  
+    console.log('--------MENU--------')
     console.log('1 - Cadastro')
     console.log('2 - Exibir dados')
-    console.log('3 - Sair')
-while(resposta !== 3){    
+    console.log('3 - Sair')  
     resposta = Number(read.question("Digite o número da opção desejada: "))
-    if(resposta === 1){
-        
+    if(resposta === 1){ 
+        let nome = read.question("Digite o nome: ")
+        let email = read.question("Digite o email: ")
+        let idade = read.question("Digite a idade: ")
+        array.push({nome,email,idade})       
         
     } else if(resposta === 2){
         console.log(array)
